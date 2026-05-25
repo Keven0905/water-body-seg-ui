@@ -34,3 +34,6 @@ backend/uploads/
 backend/history.json
 backend/users.json
 .claude/
+
+# Documents
+*.pdf
