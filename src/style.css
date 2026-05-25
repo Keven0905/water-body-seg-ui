@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  /* 定义主色调，Tailwind v4 会自动生成 bg-primary, text-primary 等类 */
+  --color-primary: #6366f1;
+  --color-primary-hover: #4f46e5;
+
+  /* 定义暗黑模式背景色，自动生成 bg-dark-bg, bg-dark-panel */
+  --color-dark-bg: #0f172a;
+  --color-dark-panel: #1e293b;
+}
+
+/* 项目基础样式 */
+/* 修改 src/style.css 中的 body 样式 */
+body {
+  margin: 0;
+  background-color: var(--color-dark-bg);
+  /* 增加微弱的科技感网格背景 */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fade-enter-active, .fade-leave-active { 
+  transition: opacity 0.3s ease; 
+}
+.fade-enter-from, .fade-leave-to { 
+  opacity: 0; 
+}
